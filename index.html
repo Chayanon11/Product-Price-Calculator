@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Price Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <h3>Food Price Calculator</h3>
+        <br />
+        <h4>
+          Enter the food name, price and quantity to calculate the total price.
+        </h4>
+        <h1 id="calc-result"></h1>
+        <div id="calc-price-list"></div>
+        <div id="calc-form">
+          <input type="text" id="calc-food" placeholder="Enter food name" />
+          <input type="number" id="calc-price" placeholder="Enter price" />
+          <input
+            type="number"
+            id="calc-quantity"
+            placeholder="Enter quantity" />
+          <button id="add">Add</button>
+        </div>
+        <div>
+          <button id="calculate">Calculate</button>
+          <button id="clear">Clear</button>
+        </div>
+      </div>
+      <div class="receipt">
+        <div id="receipt-content">
+          <h3>Receipt</h3>
+          <h1 id="receipt-result"></h1>
+          <div id="receipt-price-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

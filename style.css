@@ -1,0 +1,148 @@
+body {
+  font-family: "Orbitron", sans-serif;
+  background-color: #0a0a0a;
+  color: #39ff14;
+  margin: 0;
+  padding: 20px;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.calculator,
+.receipt {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #121212;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #0f0;
+  border: 1px solid #39ff14;
+}
+
+input,
+button,
+#receipt-content {
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #222;
+  border: 2px solid #39ff14;
+  color: #39ff14;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+  border-color: #0f0;
+}
+
+input::placeholder {
+  color: #39ff14;
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px #39ff14;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -50%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(57, 255, 20, 0.6),
+    transparent
+  );
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  background-color: #006600;
+  box-shadow: 0 0 20px #39ff14;
+}
+
+button:hover::after {
+  left: 110%;
+}
+
+button:active {
+  background-color: #005500;
+}
+
+#calculate,
+#clear {
+  background-color: #003300;
+}
+
+#clear {
+  background-color: #660000;
+}
+
+#clear:hover {
+  background-color: #990000;
+}
+
+h1,
+h3 {
+  text-shadow: 0 0 10px #0f0;
+}
+
+#form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+#price-list,
+#receipt-content {
+  background-color: #181818;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 20px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .calculator,
+  .receipt {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #39ff14;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0f0;
+}
